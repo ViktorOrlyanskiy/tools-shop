@@ -1,0 +1,32 @@
+/* ========== Глобальные переменные ========== */
+@import "../../../styles/variables.scss";
+
+
+.table__header {
+
+    @include flexbox-center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 1px solid $color-border;
+    
+}
+.row-header {
+
+    &__name {
+        flex: 1 0 60%;
+    }
+
+    &__price {
+        flex: 1 0 10%;
+    }
+
+    &__amount {
+        flex: 1 0 10%;
+    }
+
+    &__sum {
+    }
+}

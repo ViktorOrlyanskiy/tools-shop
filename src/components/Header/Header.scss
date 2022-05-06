@@ -1,2 +1,29 @@
 /* ========== Глобальные переменные ========== */
 @import "../../styles/variables.scss";
+
+
+.header {
+
+    width: 100%;
+    height: 100px;
+
+    padding: 0 20px;
+
+    @include flexbox-center;
+    justify-content: space-between;
+
+    background-color: $bg-color-header;
+    color: $color-white;
+    font-size: 28px;
+
+    &__title {
+        cursor: pointer;
+    }
+
+    &__menu {
+        margin: 0 10px;
+    }
+
+    &__button {
+    }
+}

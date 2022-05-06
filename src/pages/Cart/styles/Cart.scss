@@ -1,0 +1,53 @@
+/* ========== Глобальные переменные ========== */
+@import "../../../styles/variables.scss";
+
+
+.cart{
+    padding: 50px 10px;
+
+    &__body{
+        padding: 0 50px;
+    }
+
+    &__table{
+       
+    }
+
+    &__empty{
+        font-size: 28px;
+    }
+
+    &__total{
+
+        width: 100%;
+        margin: 20px 0;
+        @include flexbox-center;
+        justify-content: flex-end;
+
+
+    }
+    &__text{
+        margin-right: 30px;
+        font-size: 22px;
+        font-weight: 700;
+    }
+    &__button{
+        padding: 15px 20px;
+        
+        background-color: $bg-color-header;
+        border-radius: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        color: $color-white;
+        cursor: pointer;
+        user-select: none;
+        transition: background-color 0.2s;
+    }
+
+    &__button:hover{
+        background-color: $bg-color-active;
+    }
+    &__button:active{
+        transform: scale(0.95);
+    }
+}

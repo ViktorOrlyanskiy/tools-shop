@@ -1,2 +1,23 @@
 /* ========== Глобальные переменные ========== */
 @import "../../styles/variables.scss";
+
+.nav {
+}
+.menu {
+
+    
+
+		&__list {
+            @include flexbox-center;
+		}
+
+		&__item {
+            margin: 0 10px;
+		}
+		&__item:first-child{
+            margin-left: 0;
+        }
+        &__item:last-child{
+            margin-right: 10px;
+		}
+}

@@ -4,11 +4,10 @@ import './Navbar.scss';
 
 export const Navbar = () => {
     return (
-        <nav>
-            <Link to='/'>Login</Link>
-            <Link to='catalog'>Catalog</Link>
-            <Link to='cart'>Cart</Link>
-            <Link to='orders'>Orders</Link>
+        <nav className='nav'>
+            <ul className='menu__list'>
+                <Link to='orders' className='menu__item'>Orders</Link>
+            </ul>
         </nav>
     )
 }

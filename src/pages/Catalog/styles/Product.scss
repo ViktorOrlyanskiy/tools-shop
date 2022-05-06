@@ -1,0 +1,86 @@
+/* ========== Глобальные переменные ========== */
+@import "../../../styles/variables.scss";
+
+
+.product {
+
+    max-width: 300px;
+    width: 100%;
+    min-height: 400px;
+
+    margin: 0 10px 30px 10px;
+    padding: 10px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid $bg-color-header;
+    border-radius: 10px;
+
+    &__img {
+        max-width: 300px;
+        height: 280px;
+        margin-bottom: 20px;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title {
+        flex: 1 0 auto;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+
+    &__row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__price {
+        margin: 15px 0;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__amount{
+        padding-right: 10px;
+        margin: 15px 0;
+        font-size: 24px;
+        font-weight: 700;
+        color: $bg-color-header;
+    }
+
+    &__button {
+        padding: 10px 20px;
+
+        background-color: $bg-color-header;
+        border-radius: 10px;
+        color: $color-white;
+        font-size: 20px;
+        transition: background-color 0.2s;
+    }
+
+    &__button:hover{
+        background-color: $bg-color-active;
+    }
+    &__button:active{
+        transform: scale(0.95);
+    }
+}
+
+
+.product:first-child{
+    margin-left: 0;
+}
+.product:last-child{
+    margin-right: 0;
+}
+.product:nth-child(5n){
+    margin-right: 0;
+}
+.product:nth-child(6n){
+    margin-left: 0;
+}
