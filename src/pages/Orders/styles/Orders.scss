@@ -1,0 +1,11 @@
+/* ========== Глобальные переменные ========== */
+@import "../../../styles/variables.scss";
+
+.orders{
+    padding: 50px 10px;
+
+    &__table{
+        padding: 0 50px;
+    }
+
+}

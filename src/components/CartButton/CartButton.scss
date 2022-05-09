@@ -2,25 +2,29 @@
 @import "../../styles/variables.scss";
 
 
-.header-btn__cart{
-
-}
-
 .cart-btn{
-
-@include flexbox-center;
+   
+    @include flexbox-center;
 
     &__icon{
-        width: 45px;
-        height: 45px;
+        width: 30px;
+        height: 30px;
 
         margin-right: 20px;
-
+        transition: 0.2s;
+        
         svg{
             width: inherit;
             height: inherit;
         }
     }
+
+    &__icon:hover{
+        svg{
+            fill: #fff;
+        }
+    }
+
 
     &__total{
         font-size: 28px;

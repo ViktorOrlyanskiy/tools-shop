@@ -1,0 +1,73 @@
+.mySelect {
+    width: 150px;
+    margin: 0 auto;
+
+    position: relative;
+
+    user-select: none;
+    cursor: pointer;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px solid #bebebe;
+    }
+
+    &__current {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 2px 8px;
+    }
+
+    &__icon {
+        flex:0 0 auto;
+        width: 15px;
+        height: 15px;
+        
+        margin-left: auto;
+        margin-right: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__body {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+
+        border: 1px solid #bebebe;
+        border-top: none;
+    }
+
+    &__item {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 2px 8px;
+        transition: 0.1s;
+        border-bottom: 1px solid rgba($color: #bebebe, $alpha: 0.4);
+    }
+    &__item:last-child {
+        border-bottom: none;
+    }
+
+    &__item:hover{
+        background-color: rgba($color: #755D9A, $alpha: 0.8);
+        color: #fff;
+    }
+}
+
+.mySelect.active{
+    
+    .mySelect__body {
+        display:block;
+    }
+}
+
+// подключений кастомный стилей
+// @import '../../../styles/select.scss'

@@ -1,0 +1,33 @@
+.header__login{
+    margin-bottom: 5px;
+}
+
+
+.login{
+
+    &__row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item{
+    
+        margin: 10px 5px 20px 5px;
+
+        svg{
+            width: 25px;
+            height: 25px;
+        }
+
+        font-size: 20px;
+        font-weight: 700;
+        color: #000;
+
+        transition: 0.2s;
+    }
+
+    &__item:hover{
+        color: #fff;
+    }
+}

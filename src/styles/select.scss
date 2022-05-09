@@ -1,0 +1,61 @@
+
+// general
+$width-general: 170px;
+
+// current
+$padding-current: 2px 8px;
+$border-current: 1px solid #bebebe;
+$fontSize-curent: 18px;
+$lineHeight-current: 24px;
+
+// icon
+$widht-icon: 15px;
+$height-icon: 15px;
+
+// options
+$padding-option: 2px 8px;
+$fontSize-option: 16px;
+$lineHeight-option: 24px;
+$border-option: 1px solid rgba($color: #bebebe, $alpha: 0.4);
+$color-option: #000;
+
+// options-hover
+$backgroundColor-option-hover: rgba($color: #6808f7, $alpha: 0.8);
+$color-option-hover: #fff;
+
+
+.orders {
+    width: $width-general;
+    
+    .mySelect__header {
+        border: $border-current;
+    }
+
+    .mySelect__current {
+        padding: $padding-current;
+        font-size: $fontSize-curent;
+        line-height: $lineHeight-current;
+    }
+
+    .mySelect__icon {
+        width: $widht-icon;
+        height: $height-icon;
+    }
+
+    .mySelect__body{
+        width: $width-general;
+        border: $border-current;
+    }
+
+    .mySelect__item {
+        font-size: $fontSize-option;
+        line-height: $lineHeight-option;
+        padding: $padding-option;
+        border-bottom: $border-option;
+    }
+    
+    .mySelect__item:hover{
+        background-color: $backgroundColor-option-hover;
+        color:$color-option-hover;
+    }
+}

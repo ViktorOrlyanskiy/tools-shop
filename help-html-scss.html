@@ -1,10 +1,12 @@
-<div class="table__row row">
-    <div class="row__index">{props.index}</div>
-    <div class="row__image">{
-        <GetImg id={props.img} />}
+<div className='select'>
+    <div className="select__header">
+        <span className="select__current">value 1</span>
+        <div className="select__icon">&times;</div>
     </div>
-    <div class="row__">{props.}</div>
-    <div class="row__price">{props.price}</div>
-    <div class="row__amount">{props.amount}</div>
-    <div class="row__sum">{props.sum}</div>
+    <div className="select__body">
+        <div className="select__item">value 1</div>
+        <div className="select__item">value 2</div>
+        <div className="select__item">value 3</div>
+        <div className="select__item">value 4</div>
+    </div>
 </div>
