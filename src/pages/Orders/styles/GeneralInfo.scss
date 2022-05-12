@@ -4,10 +4,24 @@
 .table-order {
 
     &__info {
-        margin: 20px 0;
+        margin: 5px 0 20px 0;
     }
 }
 .info-order {
+    display: flex;
+    justify-content: space-between;
+   
+    &__column{
+        
+        &_right{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+        }
+
+    }
+
 
     &__row {
         display: flex;
@@ -15,6 +29,10 @@
     }
 
     &__cell {
+
+        &_right{
+            min-width: 80px;
+        }
 
         min-width: 130px;
 

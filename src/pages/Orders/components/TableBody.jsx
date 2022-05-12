@@ -3,6 +3,7 @@ import TableRow from './TableRow';
 
 
 function TableBody({ cellValues }) {
+
     return (
         <div className='table-order__body'>
             {(cellValues.length > 0)

@@ -1,6 +1,9 @@
 import React from 'react';
 import '../styles/TableRow.scss';
 import { displayTotalSum } from '../../../helpers/index';
+
+
+
 function TableRow({ index = 1, name, price, amount, sum }) {
 
     return (

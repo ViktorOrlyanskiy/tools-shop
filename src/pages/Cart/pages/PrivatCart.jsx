@@ -6,7 +6,7 @@ import TableRow from '../components/TableRow';
 import TableHeader from '../components/TableHeader';
 import { Modal } from '../../../components/UI/Modal/Modal';
 import { displayTotalSum } from '../../../helpers';
-import { createOrderAction } from '../../../store/orderReducer';
+import { addOrderAction } from '../../../store/orderReducer';
 import { getGoods } from '../utils/Cart';
 import { deleteCartAction } from '../../../store/cartReducer';
 
@@ -17,16 +17,18 @@ export const PrivatCart = ({ }) => {
     const goods = useSelector(state => state.cart.goods);
     const totalSum = useSelector(state => state.cart.options.totalSum);
     const [modalActive, setModalActive] = useState(false);
+    const orders = useSelector(state => state.orders.orders)
 
     const toOrder = () => {
 
         const order = {
+            id: orders.length + 1,
             statusOrder: 'Оплачен',
             totalSum: totalSum,
             goods: getGoods(goods)
         }
 
-        dispatch(createOrderAction(order))
+        dispatch(addOrderAction(order))
         dispatch(deleteCartAction())
         setModalActive(true)
 

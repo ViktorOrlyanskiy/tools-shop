@@ -1,15 +1,17 @@
 import React from 'react';
 import '../styles/Orders.scss';
-import GeneralInfo from '../components/GeneralInfo';
-import TableHeader from '../components/TableHeader';
-import TableRow from '../components/TableBody';
+import Table from '../components/Table';
 import { changeStatusOrderAction } from '../../../store/orderReducer';
 import { useDispatch, useSelector } from 'react-redux';
+import { reversSort } from '../utils';
+
+
+
 
 export const ModeratorOrders = ({ }) => {
 
     const dispatch = useDispatch();
-    const order = useSelector(state => state.order.order);
+    const orders = useSelector(state => state.orders.orders);
 
     const changeStatusOrder = (payload) => {
         dispatch(changeStatusOrderAction(payload))
@@ -18,15 +20,15 @@ export const ModeratorOrders = ({ }) => {
 
     return (
         <div className='orders'>
-            {(order.goods.length > 0)
-                ? <div className='orders__table'>
-                    <GeneralInfo
+            {(reversSort(orders).length > 0)
+
+                ? orders.map(order =>
+                    <Table
+                        key={order.id}
+                        order={order}
                         changeStatusOrder={changeStatusOrder}
-                        {...order}
-                    />
-                    <TableHeader />
-                    <TableRow cellValues={order.goods} />
-                </div>
+                    />)
+
                 : <div className='cart__empty'>Заказов нет!</div>
             }
         </div>

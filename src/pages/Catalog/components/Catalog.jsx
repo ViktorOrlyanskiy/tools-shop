@@ -7,7 +7,7 @@ export const Catalog = () => {
     const listProduct = [
         { id: 1001, name: 'Компрессор', price: '12 900 руб', img: 'img1' },
         { id: 1002, name: 'Дрель', price: '4 200 руб', img: 'img2' },
-        { id: 1003, name: 'Лобик', price: '8 200 руб', img: 'img5' },
+        { id: 1003, name: 'Лобзик', price: '8 200 руб', img: 'img5' },
         { id: 1004, name: 'Циркулярная пила', price: '4 500 руб', img: 'img3' },
         { id: 1005, name: 'Болгарка', price: '6 900 руб', img: 'img4' },
         { id: 1006, name: 'Шлифмашина', price: '12 900 руб', img: 'img6' },

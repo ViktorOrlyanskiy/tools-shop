@@ -2,16 +2,14 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MySelect.scss';
 
-const MySelect = ({ options, changeValue }) => {
+const MySelect = ({ current, options, changeValue }) => {
 
     const [active, setActive] = useState(false);
-    const [currentValue, setCurrentValue] = useState(options[0].value);
-    const [currentText, setCurrentText] = useState(options[0].text);
+    const [currentValue, setCurrentValue] = useState(current);
 
 
     const changeCurrentValue = (event) => {
         setCurrentValue(event.target.dataset.value);
-        setCurrentText(event.target.textContent)
         changeValue(event.target.dataset.value)
         setActive(false);
     };
@@ -19,7 +17,7 @@ const MySelect = ({ options, changeValue }) => {
     return (
         <div className={active ? `mySelect active` : `mySelect`}>
             <div className="mySelect__header" onClick={() => setActive(true)}>
-                <span className="mySelect__current" data-value={currentValue}>{currentText}</span>
+                <span className="mySelect__current" data-value={currentValue}>{currentValue}</span>
                 <div className="mySelect__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z" />

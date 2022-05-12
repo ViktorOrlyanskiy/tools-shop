@@ -1,12 +1,29 @@
-<div className='select'>
-    <div className="select__header">
-        <span className="select__current">value 1</span>
-        <div className="select__icon">&times;</div>
+<div class="table-order__info info-order">
+
+    {(deleteOrder !== undefined)
+    ? <div class="info-order__row">
+        <button class='info-order__button' onClick={deleteOrder}>Удалить заказ</button>
     </div>
-    <div className="select__body">
-        <div className="select__item">value 1</div>
-        <div className="select__item">value 2</div>
-        <div className="select__item">value 3</div>
-        <div className="select__item">value 4</div>
+    : ''
+    }
+
+    <div class="info-order__row">
+        <div class="info-order__cell">Номер заказа</div>
+        <div class="info-order__cell">Имя клиента</div>
+        <div class="info-order__cell">Сумма</div>
+        <div class="info-order__cell">Статус</div>
+    </div>
+    <div class="info-order__row">
+        <div class="info-order__cell">index</div>
+        <div class="info-order__cell">{user.email}</div>
+        <div class="info-order__cell">{displayTotalSum(totalSum)}</div>
+
+        <div class="info-order__cell">
+            {(changeStatusOrder !== undefined)
+            ?
+            <MySelect options={options} changeValue={changeSelectValue} current={statusOrder} />
+            : <p>{statusOrder}</p>
+            }
+        </div>
     </div>
 </div>

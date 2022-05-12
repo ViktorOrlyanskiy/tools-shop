@@ -37,8 +37,8 @@ function LoginForm({ title, handleClick, titleButton }) {
 
     const passwordHandler = (e) => {
         setPassword(e.target.value);
-        if (e.target.value < 6 || e.target.value > 10) {
-            setPasswordError('Пароль не должен быть меньше 6 и больше 10 символов');
+        if (e.target.value < 6) {
+            setPasswordError('Не менее 6 символов и 1 буквы (a-z)');
             if (!e.target.value) {
                 setPasswordError('Пароль не должен быть пустым')
             }

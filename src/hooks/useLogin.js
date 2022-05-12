@@ -9,6 +9,7 @@ export const useLogin = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+
     const parseUser = (user) => {
         return {
             email: user.email,
@@ -19,6 +20,14 @@ export const useLogin = () => {
         }
     }
 
+
+    const saveUserInLocalStorage = (user) => {
+        localStorage.setItem('email', user.email);
+        localStorage.setItem('uid', user.uid);
+        localStorage.setItem('token', user.accessToken);
+    }
+
+
     // обработка входа
     const handleLogin = (email, password) => {
         const auth = getAuth();
@@ -26,6 +35,7 @@ export const useLogin = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(({ user }) => {
                 dispatch(setUserAction(parseUser(user)))
+                saveUserInLocalStorage(user)
                 navigate('/catalog');
             })
             .catch(() => { alert('Email или пароль не действительны!') });

@@ -10,7 +10,7 @@ import { userReducer } from "./userReducer";
 
 const rootReducer = combineReducers({
     cart: cartReducer,
-    order: orderReducer,
+    orders: orderReducer,
     user: userReducer,
 })
 
